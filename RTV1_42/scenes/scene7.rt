@@ -1,0 +1,100 @@
+camera
+{
+	pos(0 20 -100)
+	dir(0 0 1)
+}
+
+content
+{
+	light
+	{
+		col(100 100 100)
+		pos(-20 10 30)
+	}
+	light
+	{
+		col(100 100 100)
+		pos(70 10 81)
+	}
+	plane
+	{
+		col(100 100 100)
+		pos(60 0 0)
+		rot(-1 0 0)
+		ambient(0.1)
+		diffuse(0.2)
+		specular(0.2)
+	}
+	plane
+	{
+		col(100 100 100)
+		pos(-50 0 0)
+		rot(1 0 0)
+		ambient(0.1)
+		diffuse(0.7)
+		specular(0.2)
+	}
+	plane
+	{
+		col(100 100 100)
+		pos(0 0 100)
+		rot(0 0 -1)
+		ambient(0.1)
+		diffuse(0.2)
+		specular(0.2)
+	}
+	plane
+	{
+		col(100 100 100)
+		pos(0 0 -101)
+		rot(0 0 1)
+		ambient(0.1)
+		diffuse(0.2)
+		specular(0.2)
+	}
+	plane
+	{
+		col(100 100 100)
+		pos(0 -11 0)
+		rot(0 1 0)
+		ambient(0.1)
+		diffuse(0.2)
+		specular(0.2)
+	}
+	plane
+	{
+		col(100 100 100)
+		pos(0 50 0)
+		rot(0 -1 0)
+		ambient(0.1)
+		diffuse(0.2)
+		specular(0.2)
+	}
+	sphere
+	{
+		col(240 100 170)
+		pos(0 0 50)
+		size(10)
+		ambient(0.1)
+		diffuse(0.7)
+		specular(0.2)
+	}
+	sphere
+	{
+		col(100 100 250)
+		pos(10 17 60)
+		size(10)
+		ambient(0.1)
+		diffuse(0.5)
+		specular(0.2)
+	}
+	sphere
+	{
+		col(100 250 100)
+		pos(20 0 50)
+		size(10)
+		ambient(0.1)
+		diffuse(0.2)
+		specular(0.2)
+	}
+}

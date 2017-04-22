@@ -1,0 +1,56 @@
+camera
+{
+	pos(0 0 -250)
+	dir(1 1 1)
+}
+
+content
+{
+	light
+	{
+		col(250 250 250)
+		pos(-40 60 -20)
+	}
+	light
+	{
+		col(250 250 250)
+		pos(100 70 70)
+	}
+	plane
+	{
+		col(10 10 10)
+		pos(0 -26 0)
+		rot(0 1 0)
+		ambient(0.2)
+		diffuse(0.5)
+		specular(0.2)
+	}
+	sphere
+	{
+		col(0 250 250)
+		pos(-12 25 5)
+		size(25)
+		ambient(0.2)
+		diffuse(0.5)
+		specular(0.2)
+	}
+	sphere
+	{
+		col(0 250 250)
+		pos(45 -23 -13)
+		size(35)
+		ambient(0.2)
+		diffuse(0.5)
+		specular(0.2)
+	}
+	cylinder
+	{
+		col(240 150 0)
+		pos(-100 0 40)
+		size(10)
+		rot(1 2 1)
+		ambient(0.2)
+		diffuse(0.5)
+		specular(0.2)
+	}
+}

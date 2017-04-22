@@ -1,0 +1,24 @@
+camera
+{
+	pos(0 0 -250)
+	dir(0 0 1)
+}
+
+content
+{
+	light
+	{
+		col(250 0 250)
+		pos(-60 60 -60)
+	}
+	cone
+	{
+		col(250 0 250)
+		pos(40 0 -20)
+		size(60)
+		rot(0 1 0)
+		ambient(0.1)
+		diffuse(0.6)
+		specular(0.2)
+	}
+}
