@@ -1,0 +1,245 @@
+body{
+	background-color: #505050;
+	width: 100%;
+
+}
+
+.docu{
+	height: 200px;
+	width: 1850px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header{
+	box-shadow: 8px 11px 8px #000000;
+	background-color: #909090;
+	border-radius: 10px;
+	padding-top: 10px;
+	height: 160px;
+}
+
+.header_right_side{
+	margin: 5px;
+	float: right;
+}
+
+header img{
+	margin: 0;
+	height: 100%;
+	margin-left: 7px;
+}
+
+.loupe{
+	width: 80%;
+	height: 90%;
+	margin-top: 10%;
+	padding: 10px 0 10px 10px;
+	margin-right: -25%;
+	margin-left: 10%;
+	padding: 0;
+}
+
+.rightmost{
+	width: 36px;
+	height: 120px;;
+	float: right;
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.close{
+	width: 35px;
+	height: 35px;
+	position: relative;
+	margin-left: 2px;
+	margin-top: 80px;
+	margin-right: -5px;
+}
+
+.reload{
+	width: 28px;
+	height: auto;
+	margin-top: -20%;
+	margin-right: -5px;
+	margin-left: -5px;
+	padding-left: 10px;
+}
+
+.aucentre{
+	position: relative;
+	width: 1425px;
+	height: 585px;
+	padding-top: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 0 auto;
+}
+
+.left{
+	width: 200px;
+	height: 500px;
+	margin-left: -130px;
+	background-color: #909090;
+	box-shadow: 8px 11px 8px #000000;
+	border-radius: 10px;
+}
+
+.left a img{
+	display: block;
+	width: 80px ;
+	height: 80px;
+	margin : 0 auto;
+	padding: 5px;
+}
+.middle{
+	height: 630px;
+	width: 1180px;
+	position: absolute;
+	margin: 5px;
+	padding: 10px;
+	background-image: url("./resources/cluster.jpg");
+	background-size: cover;
+}
+
+.border_image{
+	height: 660px;
+	width: 1210px;
+	margin-top: -500px;
+	margin-left: 110px;
+	padding: 10px;
+	background-color: #909090;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 8px 11px 8px #000000;
+
+}
+.middle img{
+	position: absolute;
+	margin : 0 auto;
+
+}
+
+.right{
+	background-color: #909090;
+	box-shadow: 8px 11px 8px #000000;
+	width: 200px;
+	height: 500px;
+	position: absolute;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-left: 1375px;
+	margin-top: -680px;
+}
+
+.book{
+	display: block;
+	width: 75px;;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.towel{
+	display: block;
+	width: 75px;
+	height: 85px;
+	margin: 0 auto;
+}
+
+.ima{
+	width: 60px;
+	height: 45px;
+}
+
+.ima{
+	position: relative;
+	width: 140px;
+	height: 80px;
+	margin-top: 2px;
+	margin-left: -15px;
+	background-image: url("./resources/brick.jpg");
+	margin: 0 auto;
+}
+
+.message{
+	width: 570px;
+	height: 220px;
+	position: absolute;
+	margin-top: 600px;
+	margin-left: 300px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 8px 11px 8px  #000000;
+	background-color: #90EE90;
+	font-family: Times;
+	font-size: 21px;
+	padding-left: 10px;
+
+}
+
+.message span[class="bold"]{
+	font-size: 37px;
+}
+
+.message span[class="ombre"]{
+	text-shadow: 7px 7px 5px rgba(255, 77, 49, 1);
+}
+
+.bold{
+	font-size: 37px;
+}
+
+form{
+	display:inline-block;
+}
+.texte{
+	border: inset;
+	width: 400px;
+	font-size: 20px;
+}
+
+.cadre{
+	border: 4px solid red;
+}
+
+.subm{
+		border: medium none;
+		border-radius: 0;
+		font-size: 16px;
+		height: 19px;
+		letter-spacing: 1.6px;
+		padding-bottom: 20px;
+		padding-top: 1px;
+		width: 120px;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f5f7f6), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
+		border: 1px solid #A8A4A5;
+}
+
+.italic{
+	font-style: italic;
+	font-size: 20px;
+}
+
+.apple
+{
+	display: block;
+	width: 60;
+	height:50;
+	position: absolute;
+	margin-left: 1000;
+	margin-top: 400;
+}
+
+.ikea
+{
+	display: block;
+	width: 60;
+	height:50;
+	position: absolute;
+	margin-left: 400;
+	margin-top: 400;
+}

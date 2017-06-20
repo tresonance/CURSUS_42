@@ -1,0 +1,43 @@
+	<style>
+		body{
+			color:blue;
+			font-weight: bold;
+		}
+		ul ul{
+			display: none;
+			position: absolute;
+			left: 244px;
+			top: -1px;
+			margin: 0px;
+			padding: 0px;
+			border: 2px double grey;
+		}
+		li{
+			list-style-type: none;
+			position: relative;
+			width: 240px;
+			height: 45px;
+			background-color: #E0E0E0;
+			padding: 2px;
+			border: 2px double grey;
+		}
+		li:hover{
+			background-color: #FFFFFF;
+		}
+		li:hover ul.niveau2, li li:hover ul.niveau3{
+			display: block;
+		}
+		li.plus{
+			background-position: right;
+			background-repeat: no-repeat;
+			border-bottom: 2px double grey;
+		}
+		img{
+			width:30px;
+			height:30px;
+		}
+		hr{
+			height:0px;
+			border: 2px solid blue;
+		}
+	</style>

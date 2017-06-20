@@ -1,0 +1,256 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- mendeleiev.html                                    :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2017/06/12 10:40:30 by ibtraore          #+#    #+#            -->
+<!-- Updated: 2017/06/14 05:59:40 by ibtraore         ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>tableau periodique</title>
+	<style>
+		.name{
+			text-align: center;
+			color: blue;
+		}
+		table
+		{
+			width: 100%;
+		}
+		tr, td{
+			width: 35px;
+			border: 3px solid blue;
+		}
+		.empty{
+			border: 0px;
+		}
+		.masse{
+			height: 10px;
+			text-align: right;
+			font-size: 8px;
+		}
+		.prot{
+			text-align: left;
+			height: 8px;
+			font-size: 8px;
+		}
+		.atome{
+			font-size: 13px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.silver{
+			background-color: #C0C0C0;
+		}
+		.cyan{
+			background-color: #00FFFF;
+		}
+		.orange{
+			background-color: #FF9900;
+		}
+		.yellow{
+			background-color: #FFFF00;
+		}
+		.green{
+			background-color: #00FF00;
+		}
+		.lightblue{
+			background-color: #00FFFF;
+		}
+		.darkblue{
+			background-color: #0099CC;
+		}
+		.pink{
+			background-color: #FF6600;
+		}
+		.fill1{
+			background-color: #99CCCC;
+			border-bottom: 0;
+		}
+		.fill2{
+			background-color: #99CCCC;
+			border-top : 0;
+			border-bottom: 0;
+		}
+		.fill3{
+			border-top : 0;
+		}
+		.lightsalmon{
+			background-color: #FFA07A;
+		}
+		.thistle{
+			background-color: #D8BFD8;
+		}
+	</style>
+</head>
+<body>
+		<figure style="border:1px solid black;width:200px;">
+			<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dimitri_Mendelejew.jpg/200px-Dimitri_Mendelejew.jpg" alt = "photo mendeleiv"/>
+			<figcaption style="margin-left:40px;">D. Mendeleiev</figcaption>
+		</figure>
+		<h1 class = "name"> TABLEAU PERIODIQUE DES ELEMENTS</h1>
+		<table contenteditable="true">
+			<tr>
+				<td class="silver"><p class= "masse">1</p><p class="atome">H</p><p class="prot">1</p></td>
+				<td colspan="16" class="empty"></td>
+				<td class="cyan"><p class= "masse">4</p><p class="atome">He</p><p class="prot">2</p></td>
+			</tr>
+			<tr>
+				<td class="orange"><p class= "masse">7</p><p class="atome">Li</p><p class="prot">3</p></td>
+				<td class="yellow"><p class= "masse">9</p><p class="atome">Be</p><p class="prot">4</p></td>
+				<td colspan="10" class="empty"></td>
+				<td class="green"><p class= "masse">11</p><p class="atome">B</p><p class="prot">5</p></td>
+				<td class="green"><p class= "masse">12</p><p class="atome">C</p><p class="prot">6</p></td>
+				<td class="green"><p class= "masse">14</p><p class="atome" style="color:red;">N</p><p class="prot">7</p></td>
+				<td class="green"><p class= "masse">16</p><p class="atome" style="color:red;">O</p><p class="prot">8</p></td>
+				<td class="green"><p class= "masse">19</p><p class="atome" style="color:red;">F</p><p class="prot">9</p></td>
+				<td class="lightblue"><p class= "masse">15</p><p class="atome" style="color:red;">Ne</p><p class="prot">10</p></td>
+			</tr>
+			<tr>
+				<td class="orange"><p class= "masse">23</p><p class="atome">Na</p><p class="prot">11</p></td>
+				<td class="yellow"><p class= "masse">24</p><p class="atome">Mg</p><p class="prot">12</p></td>
+				<td colspan="10" class="empty"></td>
+				<td class="darkblue"><p class= "masse">27</p><p class="atome">Al</p><p class="prot">13</p></td>
+				<td class="green"><p class= "masse">28</p><p class="atome">Si</p><p class="prot">14</p></td>
+				<td class="green"><p class= "masse">31</p><p class="atome" >P</p><p class="prot">15</p></td>
+				<td class="green"><p class= "masse">32</p><p class="atome" >S</p><p class="prot">16</p></td>
+				<td class="green"><p class= "masse">35.5</p><p class="atome" style="color:red;">Cl</p><p class="prot">17</p></td>
+				<td class="lightblue"><p class= "masse">40</p><p class="atome" style="color:red;">Ar</p><p class="prot">18</p></td>
+			</tr>
+			<tr>
+				<td class="orange"><p class= "masse">39</p><p class="atome">K</p><p class="prot">19</p></td>
+				<td class="yellow"><p class= "masse">40</p><p class="atome">Ca</p><p class="prot">20</p></td>
+				<td class="pink"><p class= "masse">45</p><p class="atome">Sc</p><p class="prot">21</p></td>
+				<td class="pink"><p class= "masse">48</p><p class="atome">Ti</p><p class="prot">22</p></td>
+				<td class="pink"><p class= "masse">51</p><p class="atome" >V</p><p class="prot">23</p></td>
+				<td class="pink"><p class= "masse">52</p><p class="atome" >Cr</p><p class="prot">24</p></td>
+				<td class="pink"><p class= "masse">55</p><p class="atome">Mn</p><p class="prot">25</p></td>
+				<td class="pink"><p class= "masse">56</p><p class="atome">Fe</p><p class="prot">26</p></td>
+				<td class="pink"><p class= "masse">59</p><p class="atome" >Co</p><p class="prot">27</p></td>
+				<td class="pink"><p class= "masse">58</p><p class="atome" >Ni</p><p class="prot">28</p></td>
+				<td class="pink"><p class= "masse">63.5</p><p class="atome">Cu</p><p class="prot">29</p></td>
+				<td class="pink"><p class= "masse">65</p><p class="atome">Zn</p><p class="prot">30</p></td>
+				<td class="darkblue"><p class= "masse">70</p><p class="atome">Ga</p><p class="prot">31</p></td>
+				<td class="darkblue"><p class= "masse">72</p><p class="atome">Ge</p><p class="prot">32</p></td>
+				<td class="green"><p class= "masse">75</p><p class="atome" >As</p><p class="prot">33</p></td>
+				<td class="green"><p class= "masse">79</p><p class="atome" >Se</p><p class="prot">34</p></td>
+				<td class="green"><p class= "masse">80</p><p class="atome" style="color:grey;">Br</p><p class="prot">35</p></td>
+				<td class="lightblue"><p class= "masse">84</p><p class="atome" style="color:red;">Kr</p><p class="prot">36</p></td>
+			</tr>
+			<tr>
+				<td class="orange"><p class= "masse">85</p><p class="atome">Rb</p><p class="prot">37</p></td>
+				<td class="yellow"><p class= "masse">88</p><p class="atome">Sr</p><p class="prot">38</p></td>
+				<td class="pink"><p class= "masse">89</p><p class="atome">Y</p><p class="prot">39</p></td>
+				<td class="pink"><p class= "masse">91</p><p class="atome">Zr</p><p class="prot">40</p></td>
+				<td class="pink"><p class= "masse">93</p><p class="atome" >Nb</p><p class="prot">41</p></td>
+				<td class="pink"><p class= "masse">96</p><p class="atome" >Mo</p><p class="prot">42</p></td>
+				<td class="pink"><p class= "masse">98</p><p class="atome" style="color:white;">Tc</p><p class="prot">43</p></td>
+				<td class="pink"><p class= "masse">101</p><p class="atome">Ru</p><p class="prot">44</p></td>
+				<td class="pink"><p class= "masse">103</p><p class="atome" >Rh</p><p class="prot">45</p></td>
+				<td class="pink"><p class= "masse">106</p><p class="atome" >Pd</p><p class="prot">46</p></td>
+				<td class="pink"><p class= "masse">108</p><p class="atome">Ag</p><p class="prot">47</p></td>
+				<td class="pink"><p class= "masse">112</p><p class="atome">Cd</p><p class="prot">48</p></td>
+				<td class="darkblue"><p class= "masse">115</p><p class="atome">In</p><p class="prot">49</p></td>
+				<td class="darkblue"><p class= "masse">119</p><p class="atome">Sn</p><p class="prot">50</p></td>
+				<td class="darkblue"><p class= "masse">122</p><p class="atome" >Sb</p><p class="prot">51</p></td>
+				<td class="green"><p class= "masse">128</p><p class="atome" >Te</p><p class="prot">52</p></td>
+				<td class="green"><p class= "masse">127</p><p class="atome">I</p><p class="prot">53</p></td>
+				<td class="lightblue"><p class= "masse">131</p><p class="atome" style="color:red;">Xe</p><p class="prot">54</p></td>
+			</tr>
+			<tr>
+				<td class="orange"><p class= "masse">133</p><p class="atome">Cs</p><p class="prot">55</p></td>
+				<td class="yellow"><p class= "masse">137</p><p class="atome">Ba</p><p class="prot">56</p></td>
+				<td class="fill1"><p class= "masse"></p><p class="atome">57 to 71</p><p class="prot"></p></td>
+				<td class="pink"><p class= "masse">178.5</p><p class="atome">Hf</p><p class="prot">72</p></td>
+				<td class="pink"><p class= "masse">181</p><p class="atome" >Ta</p><p class="prot">73</p></td>
+				<td class="pink"><p class= "masse">184</p><p class="atome" >W</p><p class="prot">74</p></td>
+				<td class="pink"><p class= "masse">186</p><p class="atome">Re</p><p class="prot">75</p></td>
+				<td class="pink"><p class= "masse">190</p><p class="atome">Os</p><p class="prot">76</p></td>
+				<td class="pink"><p class= "masse">192</p><p class="atome" >Ir</p><p class="prot">77</p></td>
+				<td class="pink"><p class= "masse">195</p><p class="atome" >Pt</p><p class="prot">78</p></td>
+				<td class="pink"><p class= "masse">196</p><p class="atome">Au</p><p class="prot">79</p></td>
+				<td class="pink"><p class= "masse">200.5</p><p class="atome" style="color:green">Hg</p><p class="prot">80</p></td>
+				<td class="darkblue"><p class= "masse">204</p><p class="atome">Ti</p><p class="prot">81</p></td>
+				<td class="darkblue"><p class= "masse">207</p><p class="atome">Pb</p><p class="prot">82</p></td>
+				<td class="darkblue"><p class= "masse">208.9</p><p class="atome" >Bi</p><p class="prot">83</p></td>
+				<td class="darkblue"><p class= "masse">209</p><p class="atome" >Po</p><p class="prot">84</p></td>
+				<td class="green"><p class= "masse">210</p><p class="atome">At</p><p class="prot">85</p></td>
+				<td class="lightblue"><p class= "masse">222</p><p class="atome" style="color:red;">Rn</p><p class="prot">86</p></td>
+			</tr>
+			<tr>
+				<td class="orange"><p class= "masse">(223)</p><p class="atome">Fr</p><p class="prot">87</p></td>
+				<td class="yellow"><p class= "masse">(226)</p><p class="atome">Ra</p><p class="prot">88</p></td>
+				<td class="fill2"><p class= "masse"></p><p class="atome">89 to 103</p><p class="prot"></p></td>
+				<td class="pink"><p class= "masse">(261)</p><p class="atome" style="color:white;">Rf</p><p class="prot">104</p></td>
+				<td class="pink"><p class= "masse">(262)</p><p class="atome" style="color:white;" >Db</p><p class="prot">105</p></td>
+				<td class="pink"><p class= "masse">(266)</p><p class="atome" style="color:white;" >Sg</p><p class="prot">106</p></td>
+				<td class="pink"><p class= "masse">(264)</p><p class="atome" style="color:white;">Bh</p><p class="prot">107</p></td>
+				<td class="pink"><p class= "masse">(269)</p><p class="atome" style="color:white;">Hs</p><p class="prot">108</p></td>
+				<td class="pink"><p class= "masse">(268)</p><p class="atome" style="color:white;" >Mt</p><p class="prot">109</p></td>
+				<td class="pink"><p class= "masse">(271)</p><p class="atome" style="color:white;" >Ds</p><p class="prot">110</p></td>
+				<td class="pink"><p class= "masse">(272)</p><p class="atome" style="color:white;">Rg</p><p class="prot">111</p></td>
+				<td class="pink"><p class= "masse">(285)</p><p class="atome" style="color:white">Uub</p><p class="prot">112</p></td>
+				<td class="darkblue"><p class= "masse">(284)</p><p class="atome" style="color:white;">Uut</p><p class="prot">113</p></td>
+				<td class="darkblue"><p class= "masse">(289)</p><p class="atome" style="color:white;">Uuq</p><p class="prot">114</p></td>
+				<td class="darkblue"><p class= "masse">(288)</p><p class="atome"style="color:white;" >Uup</p><p class="prot">115</p></td>
+				<td class="darkblue"><p class= "masse">(292)</p><p class="atome" style="color:white;" >Uuh</p><p class="prot">116</p></td>
+				<td class="white"><p class= "masse"></p><p class="atome" style="color:grey;">At</p><p class="prot">117</p></td>
+				<td class="white"><p class= "masse"></p><p class="atome" style="color:grey;">Rn</p><p class="prot">118</p></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="border:0;"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td class="fill2"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td colspan="15" style="border:0;font-family:helvetica;"><p class= "masse"></p>Atomic masses in parentheses are those of the most stable or common isotope.<p class="atome"></p></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="border:0;"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td class="fill2"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="border:0;"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td class="fill2" style="border-right:0;"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td class="pink"><p class= "masse">139</p><p class="atome">La</p><p class="prot">57</p></td>
+				<td class="lightsalmon"><p class= "masse">140</p><p class="atome">Ce</p><p class="prot">58</p></td>
+				<td class="lightsalmon"><p class= "masse">141</p><p class="atome">Pr</p><p class="prot">79</p></td>
+				<td class="lightsalmon"><p class= "masse">144</p><p class="atome" >Nd</p><p class="prot">60</p></td>
+				<td class="lightsalmon"><p class= "masse">(145)</p><p class="atome" style="color:white;" >Pm</p><p class="prot">61</p></td>
+				<td class="lightsalmon"><p class= "masse">150</p><p class="atome">Sm</p><p class="prot">62</p></td>
+				<td class="lightsalmon"><p class= "masse">152</p><p class="atome">Eu</p><p class="prot">63</p></td>
+				<td class="lightsalmon"><p class= "masse">157</p><p class="atome" >Gd</p><p class="prot">64</p></td>
+				<td class="lightsalmon"><p class= "masse">159</p><p class="atome" >Tb</p><p class="prot">65</p></td>
+				<td class="lightsalmon"><p class= "masse">162.5</p><p class="atome">Dy</p><p class="prot">66</p></td>
+				<td class="lightsalmon"><p class= "masse">165</p><p class="atome">Ho</p><p class="prot">67</p></td>
+				<td class="lightsalmon"><p class= "masse">167</p><p class="atome">Er</p><p class="prot">68</p></td>
+				<td class="lightsalmon"><p class= "masse">169</p><p class="atome">Tm</p><p class="prot">69</p></td>
+				<td class="lightsalmon"><p class= "masse">173</p><p class="atome">Yb</p><p class="prot">70</p></td>
+				<td class="lightsalmon"><p class= "masse">175</p><p class="atome">Lu</p><p class="prot">71</p></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="border:0;"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td class="fill2" style="border-right:0;"><p class= "masse"></p><p class="atome"></p><p class="prot"></p></td>
+				<td class="pink"><p class= "masse">(227)</p><p class="atome">Ac</p><p class="prot">89</p></td>
+				<td class="thistle"><p class= "masse">232</p><p class="atome">Th</p><p class="prot">90</p></td>
+				<td class="thistle"><p class= "masse">231</p><p class="atome">Pa</p><p class="prot">91</p></td>
+				<td class="thistle"><p class= "masse">238</p><p class="atome" >U</p><p class="prot">92</p></td>
+				<td class="thistle"><p class= "masse">(237)</p><p class="atome" style="color:white;" >Np</p><p class="prot">93</p></td>
+				<td class="thistle"><p class= "masse">(244)</p><p class="atome" style="color:white;">Pu</p><p class="prot">94</p></td>
+				<td class="thistle"><p class= "masse">(243)</p><p class="atome" style="color:white;">Am</p><p class="prot">95</p></td>
+				<td class="thistle"><p class= "masse">(247)</p><p class="atome" style="color:white" >Cm</p><p class="prot">96</p></td>
+				<td class="thistle"><p class= "masse">(247)</p><p class="atome" style="color:white;" >Bk</p><p class="prot">97</p></td>
+				<td class="thistle"><p class= "masse">(251)</p><p class="atome" style="color:white;">Cf</p><p class="prot">98</p></td>
+				<td class="thistle"><p class= "masse">(252)</p><p class="atome" style="color:white;">Es</p><p class="prot">99</p></td>
+				<td class="thistle"><p class= "masse">(257)</p><p class="atome" style="color:white;">Fm</p><p class="prot">100</p></td>
+				<td class="thistle"><p class= "masse">(258)</p><p class="atome" style="color:white;">Md</p><p class="prot">101</p></td>
+				<td class="thistle"><p class= "masse">(259)</p><p class="atome" style="color:white;">No</p><p class="prot">102</p></td>
+				<td class="thistle"><p class= "masse">(262)</p><p class="atome" style="color:white;">Lr</p><p class="prot">103</p></td>
+			</tr>
+		</table>
+</body>
+</html>
