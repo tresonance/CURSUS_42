@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/14 03:35:54 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/22 02:53:51 by ibtraore         ###   ########.fr       */
+/*   Updated: 2017/05/11 01:56:06 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int				check_param(char *str, int i, int max)
 	i += 1;
 	while (str[i] != '\0' && str[i] != ')')
 	{
-		if (1 == ft_iswhitespace(str[i - 1]) && 0 == ft_iswhitespace(str[i]))
+		if (i - 1 >= 0 && 1 == ft_iswhitespace(str[i - 1]) &&
+			0 == ft_iswhitespace(str[i]))
 			words += 1;
 		i += 1;
 	}
@@ -62,6 +63,7 @@ int				parser_cam(t_cam *cam, char **tab)
 	cam->dir.y = ft_atof(tab[3], &i);
 	cam->dir.z = ft_atof(tab[3], &i);
 	cam->dir.w = 1.0;
+	cam->lookat = cam->dir;
 	if (0 != ft_strcmp(")", &tab[3][i]) && 0 != ft_strcmp("}", tab[4]))
 		return (0);
 	return (1);

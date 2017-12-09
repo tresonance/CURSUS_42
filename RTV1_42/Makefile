@@ -6,15 +6,15 @@
 #    By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/26 00:15:03 by ibtraore          #+#    #+#              #
-#    Updated: 2017/04/21 04:01:53 by thchin           ###   ########.fr        #
+#    Updated: 2017/05/10 23:18:35 by ibtraore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = rtv1
-CC = clang
+CC = gcc
 LIB_NAME = ft
 LIBDIR = libft
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror #-fsanitize=address
 
 HEADERS = includes
 
@@ -32,20 +32,25 @@ SOURCES = srcs/inter_utils.c\
 		  srcs/color.c\
 		  srcs/draw.c\
 		  srcs/closest_t.c\
+		  srcs/translate_light.c\
+		  srcs/light_composantes.c\
+		  srcs/get_light2.c\
 		  srcs/clear.c\
+		  srcs/mouse_hook.c\
+		  srcs/display_cam_info.c\
+		  srcs/display_obj_info.c\
 		  srcs/main.c\
 		  srcs/get.c\
 		  srcs/hook.c\
-		  srcs/matrix.c\
-		  srcs/event.c\
-		  srcs/get_light.c\
+		  srcs/translate_event.c\
+		  srcs/rotate_event.c\
 		  srcs/get_scene.c\
 		  srcs/copy.c\
 
 OBJECTS = $(SOURCES:.c=.o)
 
 $(NAME): $(LIBDIR)/lib$(LIB_NAME).a $(OBJECTS)
-	 @$(CC) $(FLAGS) -L $(LIBDIR) -l $(LIB_NAME) -o $@ $^ -lmlx -L./minilibx_macos -framework OpenGL -framework AppKit -lpthread
+	 @$(CC) $(FLAGS) -L $(LIBDIR) -l $(LIB_NAME) -o $@ $^ -lmlx  -L./minilibx_macos -framework OpenGL -framework AppKit -lpthread
 	  @echo "compiling [ $(NAME) ] SUCCESS"
 
 $(LIBDIR)/lib$(LIB_NAME).a :

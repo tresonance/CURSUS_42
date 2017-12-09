@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/02 08:22:23 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/21 04:15:12 by thchin           ###   ########.fr       */
+/*   Updated: 2017/05/05 13:06:29 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 double	solver(t_solver *s)
 {
 	s->delta = s->b * s->b - 4.0 * s->a * s->c;
-	if (s->delta < 0)
+	if (s->delta < 0.0001)
 		return (-1.0);
 	s->t1 = 0.5 * (-1.0 * s->b - sqrtf(s->delta)) / ((double)s->a);
 	s->t2 = 0.5 * (-1.0 * s->b + sqrtf(s->delta)) / ((double)s->a);
-	if (s->t1 >= 0 && s->t2 >= 0)
+	if (s->t1 >= 0.0001 && s->t2 >= 0.0001)
 		return ((s->t1 < s->t2) ? s->t1 : s->t2);
-	else if (s->t1 * s->t2 <= 0.0)
-		return ((s->t1 >= 0.0) ? s->t1 : s->t2);
+	else if (s->t1 * s->t2 <= 0.0001)
+		return ((s->t1 >= 0.0001) ? s->t1 : s->t2);
 	else
-		return (-1);
+		return (-1.0);
 }
 
 void	get_hit_point_info1(t_hit *hit_point, t_obj *obj, t_ray *ray)

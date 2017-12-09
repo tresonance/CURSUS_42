@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/02 20:28:35 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/22 03:10:06 by ibtraore         ###   ########.fr       */
+/*   Updated: 2017/05/11 02:09:57 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	sum_color(double sum[3], t_color *c, double p, int flag)
 {
 	if (INIT == flag)
 	{
-		sum[0] = 0;
-		sum[1] = 0;
-		sum[2] = 0;
+		sum[0] = 0.0;
+		sum[1] = 0.0;
+		sum[2] = 0.0;
 	}
 	if (ADD == flag)
 	{
@@ -42,7 +42,7 @@ void	check_t(t_env *env, double sum[3], t_ray ray, t_obj *hit_obj)
 {
 	t_color	color;
 
-	if (-1.0 < env->t && env->t < 8000.0)
+	if (0.0001 < env->t && env->t < 8000.0)
 		color = lighting(env->obj, &hit_obj, ray, env->t);
 	else
 		color = (t_color){0, 0, 0};
@@ -84,18 +84,15 @@ void	drawer(t_list *list, t_env *e)
 {
 	double	x[2];
 	t_color	color;
-	t_env	tmp;
-	t_list	*node;
-	t_list	*node2;
 
 	x[0] = -1;
-	while (++x[0] < HEIGHT)
+	while (++x[0] < (double)HEIGHT)
 	{
 		x[1] = -1;
-		while (++x[1] < WIDTH)
+		while (++x[1] < (double)WIDTH)
 		{
 			color = get_pixel_color(e, list, x[1], x[0]);
-			pixel_put(x[1], x[0], color, e->mlx);
+			pixel_put((int)x[1], (int)x[0], color, &e->mlx);
 		}
 	}
 }
@@ -103,5 +100,12 @@ void	drawer(t_list *list, t_env *e)
 void	draw_obj(t_env *e)
 {
 	drawer(e->obj, e);
+	mlx_clear_window(e->mlx.mlx, e->mlx.win);
 	mlx_put_image_to_window(e->mlx.mlx, e->mlx.win, e->mlx.img, 0, 0);
+	display_cam_info(e);
+	if (e->is_obj_selected == 1)
+	{
+		display_info1(e, e->hit_obj);
+		display_info2(e, e->hit_obj);
+	}
 }

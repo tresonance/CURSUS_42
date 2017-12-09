@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 10:06:44 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/22 03:03:27 by ibtraore         ###   ########.fr       */
+/*   Updated: 2017/05/11 02:00:16 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ double	cone_inter(t_obj *obj, t_ray *ray)
 	t_solver	s;
 	double		m;
 
+	m = 0;
 	s.dist = subvect(&obj->pos, &ray->pos);
 	normalize(&obj->rot);
 	s.a = prodscal(&ray->dir, &ray->dir) - (1 + pow(tan(obj->size), 2)) *

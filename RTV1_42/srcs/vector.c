@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/14 07:42:37 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/21 04:16:20 by thchin           ###   ########.fr       */
+/*   Updated: 2017/05/05 13:21:38 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_vector	scalevect(double k, t_vector *v1)
 	v.x = k * v1->x;
 	v.y = k * v1->y;
 	v.z = k * v1->z;
-	v.w = 1.0;
+	v.w = 0.0;
 	return (v);
 }
 

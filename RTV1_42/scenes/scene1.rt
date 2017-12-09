@@ -1,6 +1,6 @@
 camera
 {
-	pos(0 0 -250)
+	pos(0 0 -280)
 	dir(0 0 0)
 }
 
@@ -8,13 +8,13 @@ content
 {
 	light
 	{
-		col(250 250 250)
-		pos(20 50 0)
+		col(250 200 250)
+		pos(50 80 20)
 	}
 	light
 	{
-		col(250 250 250)
-		pos(-20 50 0)
+		col(200 250 250)
+		pos(-50 80 20)
 	}
 	plane
 	{

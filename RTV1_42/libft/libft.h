@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 01:40:35 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/06 05:21:58 by ibtraore         ###   ########.fr       */
+/*   Updated: 2017/05/11 03:25:17 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,12 @@ t_list			*ft_lstat(t_list *lst, size_t val);
 int				ft_min(int a, int b);
 int				ft_max(int a, int b);
 int				ft_abs(int i);
+char			*ft_strjoin_free(char *s1, char *s2, char type);
 int				ft_iswhitespace(char c);
 size_t			ft_countwords(char *str, char c);
 int				get_next_line(const int fd, char **line);
 void			ft_swap(double *a, double *b);
+char			*ft_itoa(int n);
 double			ft_atof(char *nb, int *i);
 
 #endif

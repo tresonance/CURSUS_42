@@ -5,52 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 01:19:43 by ibtraore          #+#    #+#             */
-/*   Updated: 2016/12/23 01:19:47 by ibtraore         ###   ########.fr       */
+/*   Created: 2017/05/06 13:15:18 by ibtraore          #+#    #+#             */
+/*   Updated: 2017/05/06 14:11:44 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-static size_t	digit_count(long n)
+static long		ft_digitnb(int n)
 {
-	size_t i;
+	long		size;
 
-	i = 1;
+	if (n == 0)
+		return (1);
+	size = 0;
 	if (n < 0)
-		n = -n;
-	while (n >= 10)
 	{
-		i++;
-		n /= 10;
+		size++;
+		n = -n;
 	}
-	return (i);
+	while (n != 0)
+	{
+		n /= 10;
+		size++;
+	}
+	return (size++);
+}
+
+static int		ft_sign(int n)
+{
+	if (n < 0)
+		return (1);
+	return (0);
 }
 
 char			*ft_itoa(int n)
 {
-	long	v;
-	size_t	count;
-	char	*str;
-	char	neg;
+	long		n_long;
+	long		length;
+	char		*fresh;
 
-	v = n;
-	neg = (v < 0 ? 1 : 0);
-	count = digit_count(v);
-	str = ft_strnew(count + neg);
-	if (str == NULL)
+	n_long = n;
+	length = ft_digitnb(n_long);
+	fresh = (char *)malloc((length + 1) * sizeof(char));
+	if (!fresh)
 		return (NULL);
-	if (neg)
+	fresh[length] = '\0';
+	length--;
+	if (n_long < 0)
+		n_long = -n_long;
+	while (length >= 0)
 	{
-		v = -v;
-		str[0] = '-';
+		fresh[length] = (n_long % 10) + '0';
+		length--;
+		n_long /= 10;
 	}
-	while (count > 0)
-	{
-		str[count + neg - 1] = (v % 10) + '0';
-		count--;
-		v /= 10;
-	}
-	return (str);
+	if (ft_sign(n))
+		fresh[0] = '-';
+	return (fresh);
 }

@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/02 22:46:36 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/22 03:15:43 by ibtraore         ###   ########.fr       */
+/*   Updated: 2017/05/05 12:52:27 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ double	shadow(t_list *list, t_obj *light, t_hit hit)
 	t = find_closest_t(list, &ray, &hit_obj);
 	if (hit_obj != NULL)
 		hit_obj->current = 0;
-	if (-1 < t && t < sqrtf(prodscal(&ln, &ln)))
+	if (0.0001 < t && t < sqrtf(prodscal(&ln, &ln)))
 		return (t);
 	return (-1);
 }
@@ -44,7 +44,7 @@ double	get_spec(t_vector l, t_vector v, t_hit hit)
 	halfway = addvect(&l, &v);
 	normalize(&halfway);
 	specular = prodscal(&hit.normal, &halfway);
-	specular = specular > 0.0 ? specular : 0.0;
+	specular = specular > 0.0001 ? specular : 0.0;
 	specular = pow(specular, 100);
 	return (specular);
 }

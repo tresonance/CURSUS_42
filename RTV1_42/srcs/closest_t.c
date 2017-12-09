@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/14 06:28:36 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/21 04:02:22 by thchin           ###   ########.fr       */
+/*   Updated: 2017/05/06 16:11:05 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ double			find_closest_t(t_list *list, t_ray *ray, t_obj **hit_obj)
 		obj = (t_obj *)node->content;
 		if (0 != ft_strcmp("	light", obj->name) && 0 == obj->current)
 			get_tmp(&tmp, obj, ray);
-		if (-1 < tmp && tmp < t)
+		if (0.0001 < tmp && tmp < t)
 		{
 			t = tmp;
 			*hit_obj = obj;
 		}
 		node = node->next;
 	}
-	if (-1 < t && t < 8000.0)
+	if (0.0001 < t && t < 8000.0 && (*hit_obj))
 		(*hit_obj)->current = 1;
 	return (t);
 }

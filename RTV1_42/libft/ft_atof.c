@@ -6,15 +6,15 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/01 02:24:24 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/06 05:21:35 by ibtraore         ###   ########.fr       */
+/*   Updated: 2017/04/23 06:15:11 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	nb_size(char *nb)
+static int			nb_size(char *nb)
 {
-	int	i;
+	int				i;
 
 	i = 0;
 	while (nb[i] != '\0' && 1 == ft_isdigit(nb[i]))
@@ -22,11 +22,11 @@ static int	nb_size(char *nb)
 	return (i);
 }
 
-static double	get_integer_part(char *nb, int *i)
+static double		get_integer_part(char *nb, int *i)
 {
-	int		exp;
-	int		size;
-	double	result;
+	int				exp;
+	int				size;
+	double			result;
 
 	result = 0;
 	exp = 1;
@@ -47,9 +47,9 @@ static double	get_integer_part(char *nb, int *i)
 	return (result);
 }
 
-static double	get_float_part(int neg, double result, char *nb, int *i)
+static double		get_float_part(int neg, double result, char *nb, int *i)
 {
-	int	exp;
+	int				exp;
 
 	exp = 10;
 	while (nb[*i] != '\0' && 1 == ft_isdigit(nb[*i]))
@@ -63,10 +63,10 @@ static double	get_float_part(int neg, double result, char *nb, int *i)
 	return (result);
 }
 
-double		ft_atof(char *nb, int *i)
+double				ft_atof(char *nb, int *i)
 {
-	int		neg;
-	double	result;
+	int				neg;
+	double			result;
 
 	while (1 == ft_iswhitespace(nb[*i]))
 		*i += 1;

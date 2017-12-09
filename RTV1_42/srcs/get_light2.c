@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list.c                                             :+:      :+:    :+:   */
+/*   get_light.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/13 05:48:05 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/05/01 00:25:14 by ibtraore         ###   ########.fr       */
+/*   Created: 2017/05/06 18:46:52 by ibtraore          #+#    #+#             */
+/*   Updated: 2017/05/11 01:56:37 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rtv.h"
 
-void	lst_add_back(t_list **lst, t_list *new)
+void		light_position(t_env *e)
 {
 	t_list	*tmp;
+	t_obj	*obj;
+	t_list	*new;
+	int		i;
 
-	if (*lst == NULL)
-		*lst = new;
-	else
+	tmp = e->obj;
+	e->total_light = 0;
+	while (tmp)
 	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		obj = (t_obj*)tmp->content;
+		i = -1;
+		while (obj && obj->name[++i] && (obj->name[i] == '\t'))
+			;
+		if (obj && ft_strcmp(&obj->name[i], "light") == 0)
+		{
+			e->light[e->total_light] = obj;
+			e->total_light++;
+		}
+		tmp = tmp->next;
 	}
+	while (e->total_light < MAX_LIGHT)
+		e->light[e->total_light++] = NULL;
 }

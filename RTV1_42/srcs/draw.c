@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/16 13:44:58 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/21 04:13:33 by thchin           ###   ########.fr       */
+/*   Updated: 2017/05/11 01:54:15 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ t_color	ft_color(t_obj *hit_obj)
 	return (col);
 }
 
-void	pixel_put(int x, int y, t_color col, t_mlx mlx)
+void	pixel_put(int x, int y, t_color col, t_mlx *mlx)
 {
 	int	index;
 
 	if (x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT)
 	{
-		index = y * mlx.size_line + (x * mlx.bpp / 8);
-		mlx.data[index] = col.b;
-		mlx.data[++index] = col.g;
-		mlx.data[++index] = col.r;
+		index = y * mlx->size_line + (x * (mlx->bpp / 8));
+		mlx->data[index] = *((char*)&col.b);
+		mlx->data[++index] = *((char*)&col.g);
+		mlx->data[++index] = *((char*)&col.r);
 	}
 }

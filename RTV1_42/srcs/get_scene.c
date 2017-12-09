@@ -6,7 +6,7 @@
 /*   By: ibtraore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 08:04:26 by ibtraore          #+#    #+#             */
-/*   Updated: 2017/04/21 04:14:45 by thchin           ###   ########.fr       */
+/*   Updated: 2017/05/11 01:57:27 by ibtraore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ static int	file_to_list(char *file, t_list **list, size_t *size)
 	int		fd;
 	char	*line;
 	t_list	*new;
+	int		is_empty_file;
 
 	if (0 > (fd = open(file, O_RDONLY)))
 		return (0);
+	is_empty_file = 0;
 	while (0 < get_next_line(fd, &line))
 	{
 		*size += 1;
@@ -30,8 +32,11 @@ static int	file_to_list(char *file, t_list **list, size_t *size)
 		}
 		new->content = (void *)line;
 		lst_add_back(list, new);
+		is_empty_file++;
 	}
-	close(fd);
+	if (!is_empty_file)
+		return (0);
+	close(fd) == -1 ? err_exit("Unable to close file") : 0;
 	return (1);
 }
 
@@ -60,7 +65,6 @@ static char	**list_to_tab(t_list *list, size_t size)
 
 int			parser(t_list **obj, t_cam *cam, char **tab)
 {
-	t_list	*tmp;
 	int		i;
 
 	if (0 == parser_cam(cam, tab))
@@ -88,7 +92,10 @@ int			get_scene(t_list **obj, t_cam *cam, char *file)
 	list = NULL;
 	size = 0;
 	if (0 == file_to_list(file, &list, &size))
+	{
+		err_exit("ERROR : EXPECTED SCENE FILE");
 		return (0);
+	}
 	if (NULL == (tab = list_to_tab(list, size)))
 		return (0);
 	while (list)
