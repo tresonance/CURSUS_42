@@ -1,0 +1,51 @@
+camera
+{
+	pos(0 0 -120)
+	lookat(0 0 0)
+}
+
+content
+{
+	light
+	{
+		color_matte(1 1 1)
+		pos(20 95 0 1)
+	}
+	light
+	{
+		color_matte(1 1 1)
+		pos(60 95 0 1)
+	}
+	sphere
+	{
+		is_light(1)
+		csg_operator(1)
+		color_matte(0 1 1)
+		pos(-50 2 40)
+		color_glossy(0 1 1)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		size(45)
+		cut_info(0 50 0 1 0)
+	}
+	sphere
+	{
+		is_light(3)
+		csg_operator(1)
+		color_matte(0 1 1)
+		pos(-2 2 40)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		size(45)
+		cut_info(0 50 0 1 0)
+	}
+}
