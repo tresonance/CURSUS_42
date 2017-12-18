@@ -1,0 +1,110 @@
+camera
+{
+	pos(0 0 -80)
+	lookat(0 0 0)
+}
+
+content
+{
+	light
+	{
+		color_matte(1 1 1)
+		pos(0 120 200 1)
+	}
+	sphere
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(1 0 0)
+		pos(-10 30 200)
+		color_glossy(1 0 0)
+		indice(1.5)
+		matte_factor(0.3)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(10)
+		type(0 0)
+		size(70)
+		cut_info(0 67 0 1 0)
+	}
+	sphere
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(1 1 1)
+		pos(-10 30 200)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(7)
+		type(0 0)
+		size(40)
+		cut_info(0 56 0 1 0)
+	}
+	block
+	{
+		is_light(1)
+		csg_operator(0)
+		color_matte(0 0.5 0)
+		pos(-30 -15 -30)
+		color_glossy(0 0.5 0)
+		indice(1.5)
+		matte_factor(0.4)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		hide(1 1 1 1 1 1)
+		size(1 1 1)
+	}
+	block
+	{
+		is_light(1)
+		csg_operator(0)
+		color_matte(1 1 1)
+		pos(0 -15 -30)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.4)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		hide(1 1 1 1 1 1)
+		size(1 1 1)
+	}
+	block
+	{
+		is_light(1)
+		csg_operator(0)
+		color_matte(0.6 0 0)
+		pos(30 -15 -30)
+		color_glossy(0.6 0 0)
+		indice(1.5)
+		matte_factor(0.4)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		hide(1 1 1 1 1 1)
+		size(1 1 1)
+	}
+	plane
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.6 0.6 0.6)
+		pos(-40 -20 200)
+		color_glossy(0.6 0.6 0.6)
+		indice(1.5)
+		matte_factor(0.5)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(1 0)
+		axe(0 0.5 0)
+		cut_info(0 0 1 1 0)
+	}
+}
