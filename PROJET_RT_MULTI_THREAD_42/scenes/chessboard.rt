@@ -1,0 +1,88 @@
+camera
+{
+	pos(0 0 -80)
+	lookat(0 0 0)
+}
+
+content
+{
+	light
+	{
+		color_matte(1 1 1)
+		pos(0 -20 48 1)
+	}
+	light
+	{
+		color_matte(1 1 1)
+		pos(0 160 45 1)
+	}
+	light
+	{
+		color_matte(1 1 1)
+		pos(0 0 45 1)
+	}
+	chessboard
+	{
+		is_light(1)
+		csg_operator(0)
+		color_matte(0.4 0.5 0.7)
+		pos(0 -30 115)
+		color_glossy(0.4 0.5 0.7)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.4)
+		specular_factor(0.1)
+		tag(8)
+		type(0 0)
+		hide(1 1 1 1 0 1)
+		size(100 100 10)
+	}
+	sphere
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.4 0.5 0.7)
+		pos(-30 55 50)
+		color_glossy(0.4 0.5 0.7)
+		indice(1.5)
+		matte_factor(0.4)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		size(12)
+		cut_info(0 50 0 1 0)
+	}
+	sphere
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.4 0.5 0.7)
+		pos(8 -40 42)
+		color_glossy(0.4 0.5 0.7)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		size(12)
+		cut_info(0 56 0 1 0)
+	}
+	sphere
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.4 0.5 0.7)
+		pos(45 92 50)
+		color_glossy(0.4 0.5 0.7)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		size(12)
+		cut_info(0 12 0 1 0)
+	}
+}

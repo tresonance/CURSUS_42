@@ -1,0 +1,134 @@
+camera
+{
+	pos(-50 0 -130)
+	lookat(0 0 0)
+}
+
+content
+{
+	light
+	{
+		color_matte(1 1 1)
+		pos(90 90 -30 1)
+	}
+	light
+	{
+		color_matte(1 1 1)
+		pos(-90 80 -40 1)
+	}
+	cone
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.5 0.5 0.5)
+		pos(-60 20 80)
+		color_glossy(1 0 0)
+		indice(1.2)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(6)
+		type(0 0)
+		axe(0 1 0)
+		size(10)
+		cut_info(1 30 0 1 0)
+	}
+	plane
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(1 1 1)
+		pos(-30 -40 180)
+		color_glossy(1 1 1)
+		indice(1.2)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		axe(0 1 0)
+		cut_info(0 90 0 1 0)
+	}
+	cuboid
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(1 0 0)
+		pos(100 -20 100)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		hide(1 1 1 1 1 1)
+		size(20 20 20)
+	}
+	cylinder
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.3 1 0.5)
+		pos(150 20 70)
+		color_glossy(0.3 1 0.5)
+		indice(1.5)
+		matte_factor(0.3)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		axe(0 1 0)
+		size(15)
+		cut_info(1 80 0 1 0)
+	}
+	sphere
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.3 0.6 0.4)
+		pos(30 50 60)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(5)
+		type(0 0)
+		size(10)
+		cut_info(0 10 0 1 0)
+	}
+	triangle
+	{
+		is_light(0)
+		csg_operator(0)
+		degrade(1)
+		color_matte(1 0 0)
+		color_matte(0 1 0)
+		color_matte(0 0 1)
+		pos(-20 10 50 -25 -29 48 15 15 45)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.3)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+	}
+	torus
+	{
+		is_light(0)
+		csg_operator(0)
+		color_matte(0.6 0.4 0.8)
+		pos(175 -5 20)
+		color_glossy(1 1 1)
+		indice(1.5)
+		matte_factor(0.2)
+		glossy_factor(0.2)
+		specular_factor(0.1)
+		tag(0)
+		type(0 0)
+		axe(0 1 1)
+		size(25 5)
+	}
+}
