@@ -18,7 +18,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <stdlib.h>
-# include "../Libft/libft.h"
+# include "../libft/libft.h"
 
 # define BUF_SIZE 1000
 
