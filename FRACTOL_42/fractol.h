@@ -14,7 +14,7 @@
 # define FRACTOL_H
 
 # include "libft/libft.h"
-# include "mlx.h"
+# include "minilibx_macos/mlx.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <fcntl.h>
@@ -26,17 +26,17 @@
 # define ESC 53
 # define P_ITERATION 83
 # define N_ITERATION 86
-# define RESET 84
-# define CHANGE 85
+# define RESET 14 //84
+# define CHANGE 2 //2 //85
 # define BLOC 85
 # define IN 5
 # define OUT 4
-# define LEFT 123
-# define RIGHT 124
+# define LEFT 0 //123
+# define RIGHT 1 //124
 # define UP 126
 # define DOWN 125
-# define PLUS 69
-# define MOIN 78
+# define PLUS 12 //69
+# define MOIN 1 //78
 
 typedef struct	s_env
 {

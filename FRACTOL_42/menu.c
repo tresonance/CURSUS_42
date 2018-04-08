@@ -14,6 +14,7 @@
 
 void	display_menu(t_env *e)
 {
+		mlx_string_put(e->mlx, e->win, 5, 5 /*340*/, 0XFFFFFF, "IBTRAORE SCHOOL 42");
 	if (e->fract == 1)
 		mlx_string_put(e->mlx, e->win, 5, 340, 0XFFFFFF, "1- Mandelbrot");
 	else if (e->fract == 2)
