@@ -39,7 +39,7 @@ all: $(NAME)
 $(NAME): $(OBJ) $(HEAD)
 	make -C libft/
 	$(CC) $(CFLAGS) -I $(PATH_INC) -c $(SRC)
-	$(CC) -o $(NAME) $(OBJ) -lm -L libft/ -lft -lmlx -framework OpenGL -framework AppKit
+	$(CC) -o $(NAME) $(OBJ) -lm -L libft/ -lft -lmlx -L./minilibx_macos  -framework OpenGL -framework AppKit
 
 clean:
 	make -C libft/ clean

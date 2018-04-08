@@ -14,24 +14,25 @@
 # define FDF_H
 # include "libft/libft.h"
 # include <math.h>
-# include <mlx.h>
+# include "minilibx_macos/mlx.h"
+//# include <mlx.h>
 
 # define WIDTH 2560
 # define HEIGHT 1440
 # define BPP 32
-# define ZOOM_UP 69
-# define ZOOM_DOWN 78
+# define ZOOM_UP 2 //69
+# define ZOOM_DOWN 8//78
 # define DOWN 126
 # define UP 125
 # define LEFT 123
 # define RIGHT 124
-# define ROT_X_P 84
-# define ROT_X_N 83
-# define ROT_Y_P 87
-# define ROT_Y_N 86
-# define ROT_Z_P 91
-# define ROT_Z_N 89
-# define RESET 85
+# define ROT_X_P 12 //84
+# define ROT_X_N 13 //83
+# define ROT_Y_P 1 //87
+# define ROT_Y_N 0 //86
+# define ROT_Z_P 6 //91
+# define ROT_Z_N 7 //89
+# define RESET 14 //85
 # define ESC 53
 
 typedef struct		s_point
