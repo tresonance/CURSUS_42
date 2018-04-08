@@ -13,7 +13,7 @@
 #ifndef WOLF_H
 # define WOLF_H
 
-# include <mlx.h>
+# include "minilibx_macos/mlx.h"
 # include <math.h>
 # include <unistd.h>
 # include <stdio.h>
