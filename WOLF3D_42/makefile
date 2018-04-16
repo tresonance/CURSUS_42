@@ -29,9 +29,8 @@ SRC = main.c\
 
 OBJ = $(SRC:.c=.o)
 CC = gcc
-CFLAG = -Wall -Wextra -Werror -L./libft -lft -lmlx -framework OpenGL -framework AppKit
+CFLAG = -Wall -Wextra -Werror -L./libft -lft -lmlx -L./minilibx_macos -framework OpenGL -framework AppKit
 
-.PHONY: $(NAME) all clean fclean re
 
 all: $(NAME)
 
@@ -42,16 +41,21 @@ $(NAME): $(OBJ)
 		@mv $(OBJ) obj
 		@echo "WOLF3D COMPILATION DONE"
 
+.PHONY: $(NAME) all clean fclean re
+
+
 clean:
-	 @rm -rf obj
-	  @make clean -C libft/
-	   @rm -rf $(NAME)
-	    @rm -rf *.o
+		@rm -rf obj
+		@make  -C libft/ clean
+		@rm -rf $(NAME)
+		@rm -rf *.o
 
 fclean: clean
-	 @make fclean -C libft/ 
-	  @rm -rf $(NAME)
-	   @rm -rf *.o
-	    @echo "WOLF3D FCLEAN DONE"
+		@make fclean -C libft/ 
+		@rm -rf $(NAME)
+		@rm -rf *.o
+		@echo "WOLF3D FCLEAN DONE"
 
 re: fclean $(NAME)
+
+
