@@ -35,8 +35,8 @@ void			display_cam_pos_info(t_env *e)
 	ft_strdel(&s1);
 	e->itoacampos = ft_strjoin(s2, "]");
 	ft_strdel(&s2);
-	mlx_string_put(e->mlx.mlx, e->mlx.win, 10, 415, 0x00FEDC, "Camera");
-	mlx_string_put(e->mlx.mlx, e->mlx.win, 10, 425, 0x00FEDC, "-----------");
+	mlx_string_put(e->mlx.mlx, e->mlx.win, 10, 415, 0x00FEDC, "Camera:IBTRAORE");
+	mlx_string_put(e->mlx.mlx, e->mlx.win, 10, 425, 0x00FEDC, "---------------");
 	mlx_string_put(e->mlx.mlx, e->mlx.win, 5, 435, 0x00FEDC, "pos[");
 	mlx_string_put(e->mlx.mlx, e->mlx.win, 45, 435, 0x00FEDC, e->itoacampos);
 }
