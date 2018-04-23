@@ -1,7 +1,7 @@
 ---------------------------------------------------------
 	[RAYCASTING WOLF3D: LANCER DE RAYONS]
 	"ACTIVER LES FICHERS MUSIQUES ET REGALEZ VOUS"
-	"IL YA N'Y PAS RNB  ZOUK PAR CONTRE"
+	"IL YA N'Y PAS RNB  PAR CONTRE"
 --------------------------------------------------------
 OBIGATOIRE:
 --------------------------------------------------------
