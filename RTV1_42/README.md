@@ -8,7 +8,7 @@
 -------------------------------------------------------------
 ![alt tag](imageDeMonRTV1/scene02.png)
 -------------------------------------------------------------
-![alt tag](imageDeMonRTV1/scene03.png)
+![alt tag](imageDeMonRTV1/scene03a.png)
 -------------------------------------------------------------
 ![alt tag](imageDeMonRTV1/scene04.png)
 
