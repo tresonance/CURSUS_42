@@ -49,7 +49,7 @@
 ![alt tag](oneOutput/scene11.png)
 ----------------------------------------------------
 "TEXTURED PLANE"
-"THREE TORUS AND TWO CYLINDER"
+"THREE TORUS AND TWO CYLINDERS"
 ---------------------------------------------------
 ![alt tag](oneOutput/scene12.png)
 
